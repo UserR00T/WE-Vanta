@@ -16,6 +16,10 @@ const effects = [
 ];
 // Keeps track of the current effect
 let current;
+// Current effect name in format like effects
+let effect;
+// Props that are for a different effect than the one currently active, most likely a sign that the effect has been changed and will require props in the near future
+let newProps = {};
 
 window.wallpaperPropertyListener = {
   applyUserProperties: (properties) => {
@@ -27,6 +31,14 @@ window.wallpaperPropertyListener = {
       }
       // Load the current effect and place a reference to it in the "current" variable
       current = VANTA[properties.effect.value]('#vanta');
+      effect = properties.effect.value;
+
+      // Load any props that were set before this (effect) property was set
+      if (newProps && Object.keys(newProps).length) {
+        // Can safely overwrite as 'effect' will be the only property listed in this event
+        properties = newProps;
+        newProps = {};
+      }
     }
     for (const [key, value] of Object.entries(properties)) {
       const parts = key.split('_');
@@ -36,6 +48,11 @@ window.wallpaperPropertyListener = {
       }
       // Current effect not set, invalid state; short
       if (!current) {
+        continue;
+      }
+      // Not for this currently applied effect, can however be saved for upcoming effect
+      if (parts[0].toUpperCase() !== effect) {
+        newProps[key] = value;
         continue;
       }
       // Copy object reference to local variable to make it a bit easier to modify
