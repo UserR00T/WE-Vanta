@@ -125,7 +125,7 @@ To keep the build size small, the following files and folders will be removed on
 
 ### [Halo](https://www.vantajs.com/?effect=halo)
 
-![Halo Effect](.media/Halo.png)
+![Halo Effect](.media/halo.png)
 | Name | Description | Default Value |
 |-|-|-|
 | Amplitude Factor |  | `1` |
