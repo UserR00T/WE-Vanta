@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "[h2] A web-wallpaper that allows you to use VantaJS inside wallpaper engine![/h2]\r\n\r\nGithub link: https://github.com/UserR00T/WE-Vanta\r\n\r\nFor a full description, please see the readme provided in the repository linked above.",
+	"description" : "[h2] A web-wallpaper that allows you to use VantaJS inside wallpaper engine![/h2]\r\n\r\nGithub link: https://github.com/UserR00T/WE-Vanta\r\n\r\nVantaJS: https://www.vantajs.com/\r\n\r\nFor a full description, please see the readme provided in the repository linked above.\r\n\r\nCreated using plain old HTML, CSS, Javascript and VantaJS.",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -29,7 +29,7 @@
 				"min" : 0,
 				"order" : 109,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Background Alpha",
 				"type" : "slider",
 				"value" : 1
@@ -52,7 +52,7 @@
 				"min" : 0.5,
 				"order" : 114,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Bird Size",
 				"type" : "slider",
 				"value" : 1
@@ -66,7 +66,7 @@
 				"min" : 0,
 				"order" : 119,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Cohesion",
 				"type" : "slider",
 				"value" : 1
@@ -154,7 +154,7 @@
 				"min" : 1,
 				"order" : 116,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Speed Limit",
 				"type" : "slider",
 				"value" : 3
@@ -168,7 +168,7 @@
 				"min" : 10,
 				"order" : 115,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Wing Span",
 				"type" : "slider",
 				"value" : 15
@@ -200,7 +200,7 @@
 				"min" : 0.20000000000000001,
 				"order" : 149,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -214,7 +214,7 @@
 				"min" : 0,
 				"order" : 151,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -255,7 +255,7 @@
 				"min" : 0,
 				"order" : 148,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -314,7 +314,7 @@
 				"min" : 0,
 				"order" : 139,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -474,14 +474,14 @@
 				"condition" : "effect.value === 'FOG'",
 				"fraction" : true,
 				"index" : 1,
-				"max" : 0.9,
-				"min" : 0.1,
+				"max" : 0.90000000000000002,
+				"min" : 0.10000000000000001,
 				"order" : 101,
 				"precision" : 3,
 				"step" : 0.01,
 				"text" : "Blur Factor",
 				"type" : "slider",
-				"value" : 0.6
+				"value" : 0.59999999999999998
 			},
 			"fog_highlightcolor" : 
 			{
@@ -519,7 +519,7 @@
 				"min" : 0,
 				"order" : 103,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -530,7 +530,7 @@
 				"fraction" : true,
 				"index" : 2,
 				"max" : 3,
-				"min" : 0.1,
+				"min" : 0.10000000000000001,
 				"order" : 102,
 				"precision" : 3,
 				"step" : 0.01,
@@ -574,7 +574,7 @@
 				"min" : 0.5,
 				"order" : 132,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -588,7 +588,7 @@
 				"min" : 0,
 				"order" : 164,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Amplitude Factor",
 				"type" : "slider",
 				"value" : 1
@@ -617,10 +617,10 @@
 				"fraction" : true,
 				"index" : 63,
 				"max" : 3,
-				"min" : 0.1,
+				"min" : 0.10000000000000001,
 				"order" : 163,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -727,7 +727,7 @@
 				"min" : 0,
 				"order" : 169,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Background Alpha",
 				"type" : "slider",
 				"value" : 1
@@ -757,6 +757,24 @@
 				"type" : "color",
 				"value" : "0 0 0"
 			},
+			"topology_backgroundcolor" : 
+			{
+				"condition" : "effect.value === 'WAVES'",
+				"index" : 25,
+				"order" : 125,
+				"text" : "Color",
+				"type" : "color",
+				"value" : "0.023529411764705882 0.2627450980392157 0.2980392156862745"
+			},
+			"topology_color" : 
+			{
+				"condition" : "effect.value === 'TOPOLOGY'",
+				"index" : 26,
+				"order" : 126,
+				"text" : "Color",
+				"type" : "color",
+				"value" : "0.5372549019607843 0.5882352941176471 0.3058823529411765"
+			},
 			"trunk_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'TRUNK'",
@@ -775,7 +793,7 @@
 				"min" : 0,
 				"order" : 160,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Chaos",
 				"type" : "slider",
 				"value" : 1
@@ -798,7 +816,7 @@
 				"min" : 0,
 				"order" : 158,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Spacing",
 				"type" : "slider",
 				"value" : 1
@@ -835,7 +853,7 @@
 				"min" : 0,
 				"order" : 122,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Wave Height",
 				"type" : "slider",
 				"value" : 15
@@ -849,7 +867,7 @@
 				"min" : 0,
 				"order" : 123,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Wave Speed",
 				"type" : "slider",
 				"value" : 1
@@ -860,31 +878,13 @@
 				"fraction" : true,
 				"index" : 24,
 				"max" : 1.8,
-				"min" : 0.6,
+				"min" : 0.59999999999999998,
 				"order" : 124,
 				"precision" : 2,
-				"step" : 0.1,
+				"step" : 0.10000000000000001,
 				"text" : "Zoom",
 				"type" : "slider",
 				"value" : 1
-			},
-			"topology_backgroundcolor" : 
-			{
-				"condition" : "effect.value === 'WAVES'",
-				"index" : 25,
-				"order" : 125,
-				"text" : "Color",
-				"type" : "color",
-				"value" : "0.023529411764705882 0.2627450980392157 0.2980392156862745"
-			},
-			"topology_color" : 
-			{
-				"condition" : "effect.value === 'TOPOLOGY'",
-				"index" : 26,
-				"order" : 126,
-				"text" : "Color",
-				"type" : "color",
-				"value" : "0.5372549019607843 0.5882352941176471 0.3058823529411765"
 			}
 		}
 	},
@@ -892,8 +892,8 @@
 	"tags" : [ "Relaxing" ],
 	"title" : "Vanta",
 	"type" : "Web",
-	"version" : 2,
-	"visibility" : "private",
+	"version" : 5,
+	"visibility" : "public",
 	"workshopid" : "2553306714",
 	"workshopurl" : "steam://url/CommunityFilePage/2553306714"
 }
