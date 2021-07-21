@@ -1,4 +1,6 @@
 {
+	"contentrating" : "Everyone",
+	"description" : "[h2] A web-wallpaper that allows you to use VantaJS inside wallpaper engine![/h2]\r\n\r\nGithub link: https://github.com/UserR00T/WE-Vanta\r\n\r\nFor a full description, please see the readme provided in the repository linked above.",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -887,7 +889,11 @@
 		}
 	},
 	"preview" : "preview.jpg",
+	"tags" : [ "Relaxing" ],
 	"title" : "Vanta",
-	"type" : "web",
-	"version" : 0
+	"type" : "Web",
+	"version" : 2,
+	"visibility" : "private",
+	"workshopid" : "2553306714",
+	"workshopurl" : "steam://url/CommunityFilePage/2553306714"
 }
