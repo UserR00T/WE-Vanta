@@ -1,73 +1,89 @@
-const effects = [
-  'FOG',
-  'WAVES',
-  'CELLS',
-  'CLOUDS',
-  'CLOUDS2',
-  'BIRDS',
-  'NET',
-  'GLOBE',
-  'DOTS',
-  'RINGS',
-  'HALO',
-  'RIPPLE',
-  // 'TRUNK', // -> constructor error
-  // 'TOPOLOGY', // -> constructor error
-];
-// Keeps track of the current effect
-let current;
-// Current effect name in format like effects
-let effect;
-// Props that are for a different effect than the one currently active, most likely a sign that the effect has been changed and will require props in the near future
-let newProps = {};
-
-window.wallpaperPropertyListener = {
-  applyUserProperties: (properties) => {
-    // If the effect property was provided, make sure to configure it
-    if (properties.effect) {
-      // If a effect has already been loaded, destroy first
-      if (current) {
-        current.destroy();
-      }
-      // Load the current effect and place a reference to it in the "current" variable
-      current = VANTA[properties.effect.value]('#vanta');
-      effect = properties.effect.value;
-
-      // Load any props that were set before this (effect) property was set
-      if (newProps && Object.keys(newProps).length) {
-        // Can safely overwrite as 'effect' will be the only property listed in this event
-        properties = newProps;
-        newProps = {};
-      }
-    }
-    for (const [key, value] of Object.entries(properties)) {
-      const parts = key.split('_');
-      // Each key has the effect name in the first part of the key, so that it can be checked if it's a valid config option
-      if (!effects.includes(parts[0].toUpperCase())) {
-        continue;
-      }
-      // Current effect not set, invalid state; short
-      if (!current) {
-        continue;
-      }
-      // Not for this currently applied effect, can however be saved for upcoming effect
-      if (parts[0].toUpperCase() !== effect) {
-        newProps[key] = value;
-        continue;
-      }
-      // Copy object reference to local variable to make it a bit easier to modify
-      const options = current.options;
-      // If value type is a color, "Un-normalize" color value
-      if (value.type === 'color') {
-        const customColor = value.value.split(' ').map((c) => {
+class WEVanta {
+  properties = {};
+  get typeConverters() {
+    return {
+      color: (value) => {
+        const unNormalized = value.split(' ').map((c) => {
           return Math.ceil(c * 255);
         });
-        value.value = `rgb(${customColor})`;
-      }
-      // Execute a case insensitive search on the options key as Wallpaper Engine converts all keys to lowercase, even when camelCase is used
-      options[Object.keys(options).find((k) => k.toLowerCase() === parts[1].toLowerCase())] = value.value;
-      // Ask VantaJS to set our new options
-      current.setOptions(options);
+        return `rgb(${unNormalized})`;
+      },
+    };
+  }
+  get #effects() {
+    return [
+      'FOG',
+      'WAVES',
+      'CELLS',
+      'CLOUDS',
+      'CLOUDS2',
+      'BIRDS',
+      'NET',
+      'GLOBE',
+      'DOTS',
+      'RINGS',
+      'HALO',
+      'RIPPLE',
+      // 'TRUNK', // -> constructor error
+      // 'TOPOLOGY', // -> constructor error
+    ];
+  }
+
+  constructor() {
+    window.wallpaperPropertyListener = {
+      applyUserProperties: (p) => this.updated(p),
+    };
+  }
+
+  updated(properties) {
+    console.debug('updated', properties);
+    // Re-render vanta in the event the 'effect' property was changed
+    if (properties.effect) {
+      this.updatedEffect(properties.effect);
     }
-  },
-};
+    // Select all properties to update if effect changed - properties.effect set, & provided properties is exactly 1 (not a reset properties/init event), & this.properties is not empty
+    for (const [key, data] of Object.entries(
+      properties.effect && Object.keys(properties).length === 1 && Object.keys(this.properties || {}).length ? this.properties : properties
+    )) {
+      this.properties[key] = data;
+      this.updatedSingle(key, data);
+    }
+  }
+
+  updatedEffect({ value }) {
+    if (VANTA.current) {
+      VANTA.current.destroy();
+    }
+    VANTA[value]('#vanta');
+    // This should be done by Vanta, but unfortunately does not seem to be implemented as of writing this
+    VANTA.current.name = value;
+  }
+
+  updatedSingle(key, { type, value }) {
+    // Current effect not set, invalid state; short
+    if (!VANTA.current) {
+      return;
+    }
+    // Each key has the effect name in the first part of the key, so that it can be checked if it's a valid config option
+    const [effectName, keyUpdate] = key.split('_').map((x) => x.toUpperCase());
+    if (!this.#effects.includes(effectName)) {
+      return;
+    }
+    // Not for this currently applied effect
+    if (effectName !== VANTA.current.name) {
+      return;
+    }
+    // Copy object reference to local variable to make it a bit easier to modify
+    const { options } = VANTA.current;
+    // Convert if type converter was found
+    if (type in this.typeConverters) {
+      value = this.typeConverters[type](value);
+    }
+    // Execute a case insensitive search on the options key as Wallpaper Engine converts all keys to lowercase, even when camelCase is used
+    options[Object.keys(options).find((k) => k.toUpperCase() === keyUpdate)] = value;
+    // Ask VantaJS to set our new options
+    VANTA.current.setOptions(options);
+  }
+}
+
+window.WEVanta = new WEVanta();
