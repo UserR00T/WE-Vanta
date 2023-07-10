@@ -759,10 +759,10 @@
 			},
 			"topology_backgroundcolor" : 
 			{
-				"condition" : "effect.value === 'WAVES'",
+				"condition" : "effect.value === 'TOPOLOGY'",
 				"index" : 25,
 				"order" : 125,
-				"text" : "Color",
+				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.023529411764705882 0.2627450980392157 0.2980392156862745"
 			},
@@ -885,6 +885,14 @@
 				"text" : "Zoom",
 				"type" : "slider",
 				"value" : 1
+			},
+			"*_mousecontrols" : 
+			{
+				"index" : 25,
+				"order" : 125,
+				"text" : "Enable mouse interaction",
+				"type" : "bool",
+				"value" : true
 			}
 		}
 	},

@@ -57,6 +57,17 @@ class WEVanta {
     VANTA[value]('#vanta');
     // This should be done by Vanta, but unfortunately does not seem to be implemented as of writing this
     VANTA.current.name = value;
+
+    // Monkey patch the onMouseMove event, as this does not seem to abide the `mouseControls` property.
+    // In a perfect world this should instead just unsubscribe from the event, but it was late and patching some code upstream always sounds fun.
+    const original = VANTA.current.onMouseMove.bind(VANTA.current);
+    VANTA.current.onMouseMove = (e) => {
+      if (!VANTA.current.options.mouseControls) {
+        return;
+      }
+
+      original(e);
+    }
   }
 
   updatedSingle(key, { type, value }) {
@@ -66,11 +77,11 @@ class WEVanta {
     }
     // Each key has the effect name in the first part of the key, so that it can be checked if it's a valid config option
     const [effectName, keyUpdate] = key.split('_').map((x) => x.toUpperCase());
-    if (!this.#effects.includes(effectName)) {
+    if (effectName !== '*' && !this.#effects.includes(effectName)) {
       return;
     }
     // Not for this currently applied effect
-    if (effectName !== VANTA.current.name) {
+    if (effectName !== '*' && effectName !== VANTA.current.name) {
       return;
     }
     // Copy object reference to local variable to make it a bit easier to modify
