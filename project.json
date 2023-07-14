@@ -6,6 +6,14 @@
 	{
 		"properties" : 
 		{
+			"any_mousecontrols" : 
+			{
+				"index" : 72,
+				"order" : 172,
+				"text" : "Enable mouse interaction",
+				"type" : "bool",
+				"value" : true
+			},
 			"birds_alignment" : 
 			{
 				"condition" : "effect.value === 'BIRDS'",
@@ -29,7 +37,7 @@
 				"min" : 0,
 				"order" : 109,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Background Alpha",
 				"type" : "slider",
 				"value" : 1
@@ -52,7 +60,7 @@
 				"min" : 0.5,
 				"order" : 114,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Bird Size",
 				"type" : "slider",
 				"value" : 1
@@ -66,7 +74,7 @@
 				"min" : 0,
 				"order" : 119,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Cohesion",
 				"type" : "slider",
 				"value" : 1
@@ -154,7 +162,7 @@
 				"min" : 1,
 				"order" : 116,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Speed Limit",
 				"type" : "slider",
 				"value" : 3
@@ -168,7 +176,7 @@
 				"min" : 10,
 				"order" : 115,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Wing Span",
 				"type" : "slider",
 				"value" : 15
@@ -176,8 +184,8 @@
 			"cells_color1" : 
 			{
 				"condition" : "effect.value === 'CELLS'",
-				"index" : 45,
-				"order" : 145,
+				"index" : 47,
+				"order" : 147,
 				"text" : "Color 1",
 				"type" : "color",
 				"value" : "0.5490196078431373 0.5490196078431373 0.4627450980392157"
@@ -185,8 +193,8 @@
 			"cells_color2" : 
 			{
 				"condition" : "effect.value === 'CELLS'",
-				"index" : 47,
-				"order" : 147,
+				"index" : 49,
+				"order" : 149,
 				"text" : "Color 2",
 				"type" : "color",
 				"value" : "0.9490196078431372 0.9058823529411765 0.20784313725490197"
@@ -195,12 +203,12 @@
 			{
 				"condition" : "effect.value === 'CELLS'",
 				"fraction" : true,
-				"index" : 49,
+				"index" : 51,
 				"max" : 5,
-				"min" : 0.20000000000000001,
-				"order" : 149,
+				"min" : 0.2,
+				"order" : 151,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -209,12 +217,12 @@
 			{
 				"condition" : "effect.value === 'CELLS'",
 				"fraction" : true,
-				"index" : 51,
+				"index" : 53,
 				"max" : 5,
 				"min" : 0,
-				"order" : 151,
+				"order" : 153,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -222,8 +230,8 @@
 			"clouds2_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS2'",
-				"index" : 41,
-				"order" : 141,
+				"index" : 43,
+				"order" : 143,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0 0 0"
@@ -231,8 +239,8 @@
 			"clouds2_lightcolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS2'",
-				"index" : 46,
-				"order" : 146,
+				"index" : 48,
+				"order" : 148,
 				"text" : "Light Color",
 				"type" : "color",
 				"value" : "0.2 0.3019607843137255 0.5019607843137255"
@@ -240,8 +248,8 @@
 			"clouds2_skycolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS2'",
-				"index" : 43,
-				"order" : 143,
+				"index" : 45,
+				"order" : 145,
 				"text" : "Sky Color",
 				"type" : "color",
 				"value" : "0.3607843137254902 0.6509803921568627 0.792156862745098"
@@ -250,12 +258,12 @@
 			{
 				"condition" : "effect.value === 'CLOUDS2'",
 				"fraction" : true,
-				"index" : 48,
+				"index" : 50,
 				"max" : 5,
 				"min" : 0,
-				"order" : 148,
+				"order" : 150,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -263,8 +271,8 @@
 			"clouds2_texturepath" : 
 			{
 				"condition" : "effect.value === 'CLOUDS2'",
-				"index" : 50,
-				"order" : 150,
+				"index" : 52,
+				"order" : 152,
 				"text" : "Texture Path",
 				"type" : "file",
 				"value" : ""
@@ -281,8 +289,8 @@
 			"clouds_cloudcolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 29,
-				"order" : 129,
+				"index" : 31,
+				"order" : 131,
 				"text" : "Cloud Color",
 				"type" : "color",
 				"value" : "0.6784313725490196 0.7568627450980392 0.8705882352941177"
@@ -290,8 +298,8 @@
 			"clouds_cloudshadowcolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 31,
-				"order" : 131,
+				"index" : 33,
+				"order" : 133,
 				"text" : "Cloud Shadow Color",
 				"type" : "color",
 				"value" : "0.09411764705882353 0.20784313725490197 0.3137254901960784"
@@ -299,8 +307,8 @@
 			"clouds_skycolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 27,
-				"order" : 127,
+				"index" : 29,
+				"order" : 129,
 				"text" : "Sky Color",
 				"type" : "color",
 				"value" : "0.40784313725490196 0.7215686274509804 0.8431372549019608"
@@ -309,12 +317,12 @@
 			{
 				"condition" : "effect.value === 'CLOUDS'",
 				"fraction" : true,
-				"index" : 39,
+				"index" : 41,
 				"max" : 3,
 				"min" : 0,
-				"order" : 139,
+				"order" : 141,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -322,8 +330,8 @@
 			"clouds_suncolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 33,
-				"order" : 133,
+				"index" : 35,
+				"order" : 135,
 				"text" : "Sun Color",
 				"type" : "color",
 				"value" : "1 0.6 0.09803921568627451"
@@ -331,8 +339,8 @@
 			"clouds_sunglarecolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 35,
-				"order" : 135,
+				"index" : 37,
+				"order" : 137,
 				"text" : "Sun Glare Color",
 				"type" : "color",
 				"value" : "1 0.4 0.2"
@@ -340,8 +348,8 @@
 			"clouds_sunlightcolor" : 
 			{
 				"condition" : "effect.value === 'CLOUDS'",
-				"index" : 37,
-				"order" : 137,
+				"index" : 39,
+				"order" : 139,
 				"text" : "Sunlight Color",
 				"type" : "color",
 				"value" : "1 0.6 0.2"
@@ -349,8 +357,8 @@
 			"dots_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'DOTS'",
-				"index" : 52,
-				"order" : 152,
+				"index" : 54,
+				"order" : 154,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.13333333333333333 0.13333333333333333 0.13333333333333333"
@@ -358,8 +366,8 @@
 			"dots_color" : 
 			{
 				"condition" : "effect.value === 'DOTS'",
-				"index" : 53,
-				"order" : 153,
+				"index" : 55,
+				"order" : 155,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "1 0.5333333333333333 0.12549019607843137"
@@ -367,8 +375,8 @@
 			"dots_color2" : 
 			{
 				"condition" : "effect.value === 'DOTS'",
-				"index" : 55,
-				"order" : 155,
+				"index" : 57,
+				"order" : 157,
 				"text" : "Color 2",
 				"type" : "color",
 				"value" : "1 0.5333333333333333 0.12549019607843137"
@@ -377,10 +385,10 @@
 			{
 				"condition" : "effect.value === 'DOTS'",
 				"fraction" : true,
-				"index" : 57,
+				"index" : 59,
 				"max" : 10,
 				"min" : 0.5,
-				"order" : 157,
+				"order" : 159,
 				"precision" : 1,
 				"step" : 1,
 				"text" : "Size",
@@ -391,10 +399,10 @@
 			{
 				"condition" : "effect.value === 'DOTS'",
 				"fraction" : true,
-				"index" : 59,
+				"index" : 61,
 				"max" : 100,
 				"min" : 5,
-				"order" : 159,
+				"order" : 161,
 				"precision" : 1,
 				"step" : 1,
 				"text" : "Spacing",
@@ -474,14 +482,14 @@
 				"condition" : "effect.value === 'FOG'",
 				"fraction" : true,
 				"index" : 1,
-				"max" : 0.90000000000000002,
-				"min" : 0.10000000000000001,
+				"max" : 0.9,
+				"min" : 0.1,
 				"order" : 101,
 				"precision" : 3,
 				"step" : 0.01,
 				"text" : "Blur Factor",
 				"type" : "slider",
-				"value" : 0.59999999999999998
+				"value" : 0.6
 			},
 			"fog_highlightcolor" : 
 			{
@@ -519,7 +527,7 @@
 				"min" : 0,
 				"order" : 103,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Speed",
 				"type" : "slider",
 				"value" : 1
@@ -530,7 +538,7 @@
 				"fraction" : true,
 				"index" : 2,
 				"max" : 3,
-				"min" : 0.10000000000000001,
+				"min" : 0.1,
 				"order" : 102,
 				"precision" : 3,
 				"step" : 0.01,
@@ -541,8 +549,8 @@
 			"globe_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'GLOBE'",
-				"index" : 26,
-				"order" : 126,
+				"index" : 27,
+				"order" : 127,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.19215686274509805 0.19215686274509805 0.011764705882352941"
@@ -550,8 +558,8 @@
 			"globe_color" : 
 			{
 				"condition" : "effect.value === 'GLOBE'",
-				"index" : 28,
-				"order" : 128,
+				"index" : 30,
+				"order" : 130,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0 0.5137254901960784 1"
@@ -559,8 +567,8 @@
 			"globe_color2" : 
 			{
 				"condition" : "effect.value === 'GLOBE'",
-				"index" : 30,
-				"order" : 130,
+				"index" : 32,
+				"order" : 132,
 				"text" : "Color 2",
 				"type" : "color",
 				"value" : "0.8509803921568627 0 1"
@@ -569,12 +577,12 @@
 			{
 				"condition" : "effect.value === 'GLOBE'",
 				"fraction" : true,
-				"index" : 32,
+				"index" : 34,
 				"max" : 2,
 				"min" : 0.5,
-				"order" : 132,
+				"order" : 134,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -583,12 +591,12 @@
 			{
 				"condition" : "effect.value === 'HALO'",
 				"fraction" : true,
-				"index" : 64,
+				"index" : 66,
 				"max" : 3,
 				"min" : 0,
-				"order" : 164,
+				"order" : 166,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Amplitude Factor",
 				"type" : "slider",
 				"value" : 1
@@ -596,8 +604,8 @@
 			"halo_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'HALO'",
-				"index" : 61,
-				"order" : 161,
+				"index" : 63,
+				"order" : 163,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.07450980392156863 0.10196078431372549 0.2627450980392157"
@@ -605,8 +613,8 @@
 			"halo_basecolor" : 
 			{
 				"condition" : "effect.value === 'HALO'",
-				"index" : 62,
-				"order" : 162,
+				"index" : 64,
+				"order" : 164,
 				"text" : "Base Color",
 				"type" : "color",
 				"value" : "0.10196078431372549 0.34901960784313724 1"
@@ -615,12 +623,12 @@
 			{
 				"condition" : "effect.value === 'HALO'",
 				"fraction" : true,
-				"index" : 63,
+				"index" : 65,
 				"max" : 3,
-				"min" : 0.10000000000000001,
-				"order" : 163,
+				"min" : 0.1,
+				"order" : 165,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Size",
 				"type" : "slider",
 				"value" : 1
@@ -629,10 +637,10 @@
 			{
 				"condition" : "effect.value === 'HALO'",
 				"fraction" : true,
-				"index" : 65,
+				"index" : 67,
 				"max" : 0.5,
 				"min" : -0.5,
-				"order" : 165,
+				"order" : 167,
 				"precision" : 3,
 				"step" : 0.01,
 				"text" : "X Offset",
@@ -643,10 +651,10 @@
 			{
 				"condition" : "effect.value === 'HALO'",
 				"fraction" : true,
-				"index" : 66,
+				"index" : 68,
 				"max" : 0.5,
 				"min" : -0.5,
-				"order" : 166,
+				"order" : 168,
 				"precision" : 3,
 				"step" : 0.01,
 				"text" : "Y Offset",
@@ -656,8 +664,8 @@
 			"net_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'NET'",
-				"index" : 36,
-				"order" : 136,
+				"index" : 38,
+				"order" : 138,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.13725490196078433 0.08235294117647059 0.23529411764705882"
@@ -665,8 +673,8 @@
 			"net_color" : 
 			{
 				"condition" : "effect.value === 'NET'",
-				"index" : 34,
-				"order" : 134,
+				"index" : 36,
+				"order" : 136,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "1 0.24705882352941178 0.5058823529411764"
@@ -675,10 +683,10 @@
 			{
 				"condition" : "effect.value === 'NET'",
 				"fraction" : false,
-				"index" : 40,
+				"index" : 42,
 				"max" : 40,
 				"min" : 10,
-				"order" : 140,
+				"order" : 142,
 				"text" : "Max Distance",
 				"type" : "slider",
 				"value" : 15
@@ -687,10 +695,10 @@
 			{
 				"condition" : "effect.value === 'NET'",
 				"fraction" : true,
-				"index" : 38,
+				"index" : 40,
 				"max" : 20,
 				"min" : 1,
-				"order" : 138,
+				"order" : 140,
 				"precision" : 1,
 				"step" : 1,
 				"text" : "Points",
@@ -700,8 +708,8 @@
 			"net_showdots" : 
 			{
 				"condition" : "effect.value === 'NET'",
-				"index" : 44,
-				"order" : 144,
+				"index" : 46,
+				"order" : 146,
 				"text" : "Show Dots",
 				"type" : "bool",
 				"value" : true
@@ -710,10 +718,10 @@
 			{
 				"condition" : "effect.value === 'NET'",
 				"fraction" : false,
-				"index" : 42,
+				"index" : 44,
 				"max" : 20,
 				"min" : 10,
-				"order" : 142,
+				"order" : 144,
 				"text" : "Spacing",
 				"type" : "slider",
 				"value" : 10
@@ -722,12 +730,12 @@
 			{
 				"condition" : "effect.value === 'RINGS'",
 				"fraction" : true,
-				"index" : 69,
+				"index" : 71,
 				"max" : 1,
 				"min" : 0,
-				"order" : 169,
+				"order" : 171,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Background Alpha",
 				"type" : "slider",
 				"value" : 1
@@ -735,8 +743,8 @@
 			"rings_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'RINGS'",
-				"index" : 68,
-				"order" : 168,
+				"index" : 70,
+				"order" : 170,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.12549019607843137 0.1411764705882353 0.1568627450980392"
@@ -744,8 +752,8 @@
 			"rings_color" : 
 			{
 				"condition" : "effect.value === 'RINGS'",
-				"index" : 67,
-				"order" : 167,
+				"index" : 69,
+				"order" : 169,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0.5333333333333333 1 0"
@@ -760,8 +768,8 @@
 			"topology_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'TOPOLOGY'",
-				"index" : 25,
-				"order" : 125,
+				"index" : 26,
+				"order" : 126,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.023529411764705882 0.2627450980392157 0.2980392156862745"
@@ -769,8 +777,8 @@
 			"topology_color" : 
 			{
 				"condition" : "effect.value === 'TOPOLOGY'",
-				"index" : 26,
-				"order" : 126,
+				"index" : 28,
+				"order" : 128,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0.5372549019607843 0.5882352941176471 0.3058823529411765"
@@ -778,8 +786,8 @@
 			"trunk_backgroundcolor" : 
 			{
 				"condition" : "effect.value === 'TRUNK'",
-				"index" : 54,
-				"order" : 154,
+				"index" : 56,
+				"order" : 156,
 				"text" : "Background Color",
 				"type" : "color",
 				"value" : "0.13333333333333333 0.1411764705882353 0.14901960784313725"
@@ -788,12 +796,12 @@
 			{
 				"condition" : "effect.value === 'TRUNK'",
 				"fraction" : true,
-				"index" : 60,
+				"index" : 62,
 				"max" : 10,
 				"min" : 0,
-				"order" : 160,
+				"order" : 162,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Chaos",
 				"type" : "slider",
 				"value" : 1
@@ -801,8 +809,8 @@
 			"trunk_color" : 
 			{
 				"condition" : "effect.value === 'TRUNK'",
-				"index" : 56,
-				"order" : 156,
+				"index" : 58,
+				"order" : 158,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0.596078431372549 0.27450980392156865 0.37254901960784315"
@@ -811,12 +819,12 @@
 			{
 				"condition" : "effect.value === 'TRUNK'",
 				"fraction" : true,
-				"index" : 58,
+				"index" : 60,
 				"max" : 10,
 				"min" : 0,
-				"order" : 158,
+				"order" : 160,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Spacing",
 				"type" : "slider",
 				"value" : 1
@@ -853,7 +861,7 @@
 				"min" : 0,
 				"order" : 122,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Wave Height",
 				"type" : "slider",
 				"value" : 15
@@ -867,7 +875,7 @@
 				"min" : 0,
 				"order" : 123,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Wave Speed",
 				"type" : "slider",
 				"value" : 1
@@ -878,29 +886,21 @@
 				"fraction" : true,
 				"index" : 24,
 				"max" : 1.8,
-				"min" : 0.59999999999999998,
+				"min" : 0.6,
 				"order" : 124,
 				"precision" : 2,
-				"step" : 0.10000000000000001,
+				"step" : 0.1,
 				"text" : "Zoom",
 				"type" : "slider",
 				"value" : 1
-			},
-			"*_mousecontrols" : 
-			{
-				"index" : 25,
-				"order" : 125,
-				"text" : "Enable mouse interaction",
-				"type" : "bool",
-				"value" : true
 			}
 		}
 	},
 	"preview" : "preview.jpg",
 	"tags" : [ "Relaxing" ],
 	"title" : "Vanta",
-	"type" : "Web",
-	"version" : 5,
+	"type" : "web",
+	"version" : 7,
 	"visibility" : "public",
 	"workshopid" : "2553306714",
 	"workshopurl" : "steam://url/CommunityFilePage/2553306714"

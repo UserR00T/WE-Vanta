@@ -77,11 +77,11 @@ class WEVanta {
     }
     // Each key has the effect name in the first part of the key, so that it can be checked if it's a valid config option
     const [effectName, keyUpdate] = key.split('_').map((x) => x.toUpperCase());
-    if (effectName !== '*' && !this.#effects.includes(effectName)) {
+    if (effectName !== 'ANY' && !this.#effects.includes(effectName)) {
       return;
     }
     // Not for this currently applied effect
-    if (effectName !== '*' && effectName !== VANTA.current.name) {
+    if (effectName !== 'ANY' && effectName !== VANTA.current.name) {
       return;
     }
     // Copy object reference to local variable to make it a bit easier to modify
